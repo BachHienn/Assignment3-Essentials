@@ -28,5 +28,12 @@
     "username": "hienn",
     "passwordHash": "$2a$10$.Pyv7aA61KNkxB0aQruXweOYaOWul/UYV3Knl/hbhg5pOI0r9EURu",
     "createdAt": "2025-09-15T04:31:11.746Z"
+  },
+  {
+    "username": "b-ch-hi-n",
+    "provider": "google",
+    "googleId": "118411892956728568995",
+    "email": "jackiefablek21@gmail.com",
+    "createdAt": "2025-09-15T06:51:41.221Z"
   }
 ]

@@ -3,8 +3,10 @@ import http from "http";
 import cors from "cors";
 import { Server } from "socket.io";
 import { MAX_PLAYERS, getPublicRooms, createRoom, findRoom, joinRoom, leaveAllRooms } from "./rooms.js";
-import { createUser, verifyUser } from "./auth.js";
+import { createUser, verifyUser, verifyGoogleIdToken, createOrFindGoogleUser } from "./auth.js";
 import * as game from "./game.js";
+import dotenv from 'dotenv';
+dotenv.config();
 
 const app = express();
 app.use(cors());
@@ -13,6 +15,19 @@ app.use(express.json());
 // auth endpoints
 app.post("/auth/register", async (req, res) => { try { const { username, password } = req.body || {}; const result = await createUser({ username, password }); if (!result.ok) return res.status(400).send(result); res.send({ ok: true, username: result.username }); } catch { res.status(500).send({ ok:false, error:"Server error" }); } });
 app.post("/auth/login", async (req, res) => { try { const { username, password } = req.body || {}; const result = await verifyUser({ username, password }); if (!result.ok) return res.status(400).send(result); res.send({ ok: true, username: result.username }); } catch { res.status(500).send({ ok:false, error:"Server error" }); } });
+app.post("/auth/google", async (req, res) => {
+  try {
+    const { credential } = req.body || {};
+    if (!credential) return res.status(400).send({ ok:false, error:"Missing credential" });
+    const payload = await verifyGoogleIdToken(credential);
+    const { sub: googleId, email, name } = payload || {};
+    if (!googleId) return res.status(400).send({ ok:false, error:"Invalid Google token" });
+    const result = await createOrFindGoogleUser({ googleId, email, name });
+    res.send({ ok:true, username: result.username, created: !!result.created });
+  } catch (e) {
+    res.status(400).send({ ok:false, error: "Google sign-in failed" });
+  }
+});
 
 const server = http.createServer(app);
 const io = new Server(server, { cors: { origin: "*" } });
