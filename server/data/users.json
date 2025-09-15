@@ -1,0 +1,27 @@
+[
+  {
+    "username": "hien",
+    "passwordHash": "$2a$10$sdfNabm13Bvj0A88fNXaH.FLTCe6YMuFQRQ0PPO.ygWl0rJVVZEIy",
+    "createdAt": "2025-09-14T23:08:19.954Z"
+  },
+  {
+    "username": "hien2",
+    "passwordHash": "$2a$10$/6FEU8BiT20v7VLNC2mMXOuzdF5m4EPOajyTtpkYAKiyQw81dW87i",
+    "createdAt": "2025-09-14T23:08:45.175Z"
+  },
+  {
+    "username": "hien3",
+    "passwordHash": "$2a$10$YDy3Tzs8ZqwNwekmzGjIlOzi.XLXOqIQaCrR.XQnr1Dm6/XW5AH5a",
+    "createdAt": "2025-09-14T23:16:03.774Z"
+  },
+  {
+    "username": "hien4",
+    "passwordHash": "$2a$10$JbOuzAC7MMQ6no3Vrb4e3eKXOq4.C.NQqejj8wsY5CPis7zBcmkvS",
+    "createdAt": "2025-09-14T23:16:25.695Z"
+  },
+  {
+    "username": "hien1",
+    "passwordHash": "$2a$10$GQOqEEZngPJC5Noii9UHnOJiCQGYYcp7qo/7lbw/uuoYBEiLrHxdm",
+    "createdAt": "2025-09-15T00:23:02.728Z"
+  }
+]
