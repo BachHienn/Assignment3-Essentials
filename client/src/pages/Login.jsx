@@ -43,10 +43,10 @@ export default function Login(){
       <form onSubmit={submit}>
         <div className="space" />
         <label>Username</label>
-        <input value={username} onChange={e=>setUsername(e.target.value)} placeholder="e.g. alex" autoComplete="username" />
+        <input value={username} onChange={e=>setUsername(e.target.value)}  style={{width:"90%"}} placeholder="e.g. alex" autoComplete="username" />
         <div className="space" />
         <label>Password</label>
-        <input type="password" value={password} onChange={e=>setPassword(e.target.value)} placeholder="••••••••" autoComplete="current-password" />
+        <input type="password" value={password} onChange={e=>setPassword(e.target.value)} style={{width:"90%"}}  placeholder="••••••••" autoComplete="current-password" />
         <div className="space" />
         <button className="btn primary" type="submit">Login</button>
       </form>

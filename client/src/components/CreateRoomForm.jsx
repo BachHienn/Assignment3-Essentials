@@ -6,6 +6,7 @@ export default function CreateRoomForm(){
   const [label, setLabel] = useState("");
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
+  const wordCount = label.trim() === "" ? 0 : label.trim().split(/\s+/).length;
 
   function handleCreate(){
     const displayName = localStorage.getItem("ttg_user") || "";
@@ -24,7 +25,16 @@ export default function CreateRoomForm(){
       <h4>Create a Room</h4>
       <p className="muted">Room code will be generated automatically. You can add an optional short description.</p>
       <div className="space" />
-      <input value={label} onChange={e=>setLabel(e.target.value)} placeholder="Optional description" style={{width: "90%"}}/>
+      <textarea
+        value={label}
+        onChange={e=>{
+          const words = e.target.value.trim().split(/\s+/);
+          if (words.length <= 30) setLabel(e.target.value);
+        }}
+        placeholder="Optional description (max 30 words)"
+        style={{width: "90%", minHeight: "60px", resize: "vertical", overflowWrap: "break-word", wordWrap: "break-word", whiteSpace: "pre-wrap"}}
+      />
+       <div className="muted" style={{ fontSize: 12, marginTop: 4 }}>{wordCount}/30 words</div>
       <div className="space" />
       <button className="btn primary" onClick={handleCreate} disabled={loading}>{loading?"Creating...":"Create & Join"}</button>
     </div>

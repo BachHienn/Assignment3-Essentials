@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useRef } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { socket } from "../socket";
+import TriviaGame from "../components/TriviaGame.jsx";
 
 export default function Room(){
   const { roomId } = useParams();
@@ -8,7 +9,6 @@ export default function Room(){
   const [room, setRoom] = useState(null);
   const joinedOnce = useRef(false);
 
-  // Require login + auto-join
   useEffect(() => {
     if (!localStorage.getItem("ttg_user")) {
       alert("You must be logged in to join rooms");
@@ -26,7 +26,6 @@ export default function Room(){
     }
   }, [roomId, navigate]);
 
-  // Live updates
   useEffect(() => {
     const onUpdate = (r) => { if (r?.id === roomId) setRoom(r); };
     socket.on("room:update", onUpdate);
@@ -47,19 +46,22 @@ export default function Room(){
     });
   }
 
-  useEffect(() => () => localStorage.removeItem("ttg_current_room"), []);
+  const isHost = room && room.hostId === socket.id;
 
   return (
     <div className="card">
       <div style={{display:"flex", justifyContent:"space-between", alignItems:"center"}}>
         <h3>Room: {roomId}</h3>
-        <button className="btn" style={{backgroundColor:"tomato", color:"white"}} onClick={leave}>Leave Room</button>
+        <button className="btn" style={{backgroundColor:"red", color:"white"}} onClick={leave}>Leave Room</button>
       </div>
 
       <p className="muted">Players in room:</p>
       <ul>
-        {(room?.players || []).map(p => <li key={p.id}>• {p.name}</li>)}
+        {(room?.players || []).map(p => <li key={p.id}>• {p.name}{p.id===room?.hostId?" (host)":""}</li>)}
       </ul>
+
+      <div className="space" />
+      <TriviaGame roomId={roomId} isHost={!!isHost} />
     </div>
   );
 }

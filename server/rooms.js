@@ -1,4 +1,4 @@
-const MAX_PLAYERS = 4;
+const MAX_PLAYERS = 10;
 const rooms = new Map();
 
 function genId(len = 6) {
@@ -39,7 +39,7 @@ function joinRoom({ roomId, socketId, displayName }) {
   if (!room) return { ok: false, error: "Room not found" };
   if (room.players.some(p => p.id === socketId)) return { ok: true, room };
   if (room.players.length >= room.max) return { ok: false, error: "Room is full" };
-  room.players.push({ id: socketId, name: displayName?.trim() || `Player-${socketId.slice(0, 4)}` });
+  room.players.push({ id: socketId, name: displayName?.trim() || `Player-${socketId.slice(0, 10)}` });
   return { ok: true, room };
 }
 
