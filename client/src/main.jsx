@@ -7,6 +7,7 @@ import Lobby from "./pages/Lobby.jsx";
 import Room from "./pages/Room.jsx";
 import Register from "./pages/Register.jsx";
 import Login from "./pages/Login.jsx";
+import SinglePlayer from "./pages/SingePlayer.jsx";
 
 createRoot(document.getElementById("root")).render(
   <React.StrictMode>
@@ -18,6 +19,7 @@ createRoot(document.getElementById("root")).render(
           <Route path="/room/:roomId" element={<Room />} />
           <Route path="/register" element={<Register />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/single" element={<SinglePlayer />} />
         </Route>
       </Routes>
     </BrowserRouter>

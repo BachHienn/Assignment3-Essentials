@@ -91,7 +91,6 @@ export default function App(){
           <Link to="/" onClick={handleGuardedClick("/")} style={{textDecoration:"none"}}><h2>🎉 Trivia Task Game</h2></Link>
           <nav className="row" style={{gap:12, alignItems:"center"}}>
             <Link to="/" onClick={handleGuardedClick("/")} className="pill" aria-current={pathname === "/"}>Home</Link>
-            <Link to="/lobby" onClick={handleGuardedClick("/lobby")} className="pill" aria-current={pathname === "/lobby"}>Multiplayer Lobby</Link>
             {user ? (
               <div ref={menuRef} style={{position:"relative"}}>
                 <button className="btn" onClick={() => setMenuOpen(o => !o)} aria-haspopup="menu" aria-expanded={menuOpen}>

@@ -14,13 +14,17 @@ export default function Home(){
     }
   }
 
+  function goSingle() {
+    navigate("/single")
+  }
+
   return (
     <div className="grid">
       <div className="card">
         <h3>Singleplayer</h3>
         <p className="muted">Practice mode (placeholder). We'll add questions later.</p>
         <div className="space" />
-        <button className="btn" disabled>Coming soon</button>
+        <button className="btn primary" onClick={goSingle}>SinglePlayer</button>
       </div>
       <div className="card">
         <h3>Multiplayer</h3>

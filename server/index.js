@@ -5,6 +5,10 @@ import { Server } from "socket.io";
 import { MAX_PLAYERS, getPublicRooms, createRoom, findRoom, joinRoom, leaveAllRooms } from "./rooms.js";
 import { createUser, verifyUser, verifyGoogleIdToken, createOrFindGoogleUser } from "./auth.js";
 import * as game from "./game.js";
+import { promises as fs } from "fs";
+import path from "path";
+import { fileURLToPath } from "url";
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 import dotenv from 'dotenv';
 dotenv.config();
 
@@ -28,6 +32,20 @@ app.post("/auth/google", async (req, res) => {
     res.status(400).send({ ok:false, error: "Google sign-in failed" });
   }
 });
+
+app.get("/questions", async (req, res) => {
+  try {
+    const file = path.join(__dirname, "data", "questions.json");
+    const text = await fs.readFile(file, "utf-8");
+    const arr = JSON.parse(text);
+    if (!Array.isArray(arr) || arr.length === 0) return res.status(404).send({ ok:false, error:"No questions found" });
+    res.send({ ok:true, questions: arr });
+  } catch (e) {
+    res.status(500).send({ ok:false, error:"Failed to load questions" });
+  }
+});
+
+
 
 const server = http.createServer(app);
 const io = new Server(server, { cors: { origin: "*" } });
