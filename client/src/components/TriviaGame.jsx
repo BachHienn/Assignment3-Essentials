@@ -9,7 +9,7 @@ export default function TriviaGame({ roomId, isHost }){
   const [qCountdown, setQCountdown] = useState(null);
   const [answeredIdx, setAnsweredIdx] = useState(null);
   const [answeredCorrect, setAnsweredCorrect] = useState(null);
-  const [results, setResults] = useState(null); // NEW: per‑player results
+  const [results, setResults] = useState(null);
   const prevIdx = useRef(null);
   const navigate = useNavigate();
 
@@ -45,7 +45,6 @@ export default function TriviaGame({ roomId, isHost }){
     };
   }, [roomId, navigate]);
 
-  // When game finishes, fetch my results
   useEffect(() => {
     if (state?.finished && !results){
       socket.emit("game:results", { roomId }, (res) => {
@@ -65,7 +64,7 @@ export default function TriviaGame({ roomId, isHost }){
     return !!me?.ready;
   }, [state]);
 
-  function toggleReady(){ socket.emit("game:ready", { roomId, ready: !meReady }); }
+  function emitToggleReady(){ socket.emit("game:ready", { roomId, ready: !meReady }); }
   function next(){ socket.emit("game:next", { roomId }); }
   function answer(i){
     if (answeredIdx !== null) return;
@@ -79,14 +78,25 @@ export default function TriviaGame({ roomId, isHost }){
   if (!state || !state.started){
     const players = state?.ready || [];
     const readyCount = players.filter(p => p.ready).length;
+    const minPlayers = state?.minPlayers ?? 2;
     const canStart = state?.canStart;
+
+    // Guarded toggle: block when only one player present
+    const guardedToggle = () => {
+      if (players.length < minPlayers){
+        alert(`Game can't start with ${players.length} player. Invite a friend to join!`);
+        return;
+      }
+      emitToggleReady();
+    };
+
     return (
       <div className="card">
         <h4>Trivia — Vibe Coding Edition</h4>
-        <p className="muted">Need at least {state?.minPlayers ?? 2} players. Everyone must click Ready.</p>
+        <p className="muted">Need at least {minPlayers} players. Everyone must click Ready.</p>
 
         <div className="space" />
-        <ReadyButton meReady={meReady} toggleReady={toggleReady} />
+        <ReadyButton meReady={meReady} toggleReady={guardedToggle} disabled={players.length < minPlayers} />
         <div className="space" />
         <ul>
           {players.map(p => (
@@ -116,7 +126,6 @@ export default function TriviaGame({ roomId, isHost }){
           {sortedScores.map(s => (<li key={s.id}><strong>{s.name}</strong> — {s.score} pts</li>))}
         </ol>
 
-        {/* NEW: per‑player review */}
         <div className="space" />
         <h5>Your Answers</h5>
         <div style={{display:"grid", gap:12}}>
