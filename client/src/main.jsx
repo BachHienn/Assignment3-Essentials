@@ -8,6 +8,7 @@ import Room from "./pages/Room.jsx";
 import Register from "./pages/Register.jsx";
 import Login from "./pages/Login.jsx";
 import SinglePlayer from "./pages/SingePlayer.jsx";
+import "./styles.css"
 
 createRoot(document.getElementById("root")).render(
   <React.StrictMode>

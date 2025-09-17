@@ -5,35 +5,16 @@
     "createdAt": "2025-09-14T23:08:19.954Z"
   },
   {
-    "username": "hien2",
-    "passwordHash": "$2a$10$/6FEU8BiT20v7VLNC2mMXOuzdF5m4EPOajyTtpkYAKiyQw81dW87i",
-    "createdAt": "2025-09-14T23:08:45.175Z"
-  },
-  {
-    "username": "hien3",
-    "passwordHash": "$2a$10$YDy3Tzs8ZqwNwekmzGjIlOzi.XLXOqIQaCrR.XQnr1Dm6/XW5AH5a",
-    "createdAt": "2025-09-14T23:16:03.774Z"
-  },
-  {
-    "username": "hien4",
-    "passwordHash": "$2a$10$JbOuzAC7MMQ6no3Vrb4e3eKXOq4.C.NQqejj8wsY5CPis7zBcmkvS",
-    "createdAt": "2025-09-14T23:16:25.695Z"
-  },
-  {
-    "username": "hien1",
-    "passwordHash": "$2a$10$GQOqEEZngPJC5Noii9UHnOJiCQGYYcp7qo/7lbw/uuoYBEiLrHxdm",
-    "createdAt": "2025-09-15T00:23:02.728Z"
-  },
-  {
-    "username": "hienn",
-    "passwordHash": "$2a$10$.Pyv7aA61KNkxB0aQruXweOYaOWul/UYV3Knl/hbhg5pOI0r9EURu",
-    "createdAt": "2025-09-15T04:31:11.746Z"
-  },
-  {
     "username": "b-ch-hi-n",
     "provider": "google",
     "googleId": "118411892956728568995",
     "email": "jackiefablek21@gmail.com",
     "createdAt": "2025-09-15T06:51:41.221Z"
+  },
+  {
+    "username": "hien1",
+    "passwordHash": "$2a$10$xO1.r7vxPZfAkU3j6zKba.mVgWc03BXYcgaOhC5WrV6f6D5FvFnYS",
+    "provider": "local",
+    "createdAt": "2025-09-17T07:23:45.240Z"
   }
 ]

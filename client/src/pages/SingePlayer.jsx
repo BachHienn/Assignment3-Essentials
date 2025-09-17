@@ -180,11 +180,11 @@ export default function SinglePlayer(){
     return (
       <div className="card" style={{ maxWidth: 720 }}>
         <h3>Single Player — Vibe Coding Trivia</h3>
-        <p className="muted">Pick a difficulty. Time per question: <strong>Easy 5s</strong>, <strong>Medium 4s</strong>, <strong>Hard 3s</strong>.</p>
+        <p className="muted">Pick a difficulty. Time per question: <strong >Easy 5s</strong>, <strong>Medium 4s</strong>, <strong>Hard 3s</strong>.</p>
         <div className="space" />
         <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
           <button className="btn" style={{ background: MODE_COLORS.easy, color: "#fff", border: "none" }} onClick={() => start("easy")} disabled={!pool.length}>Easy (5s)</button>
-          <button className="btn" style={{ background: MODE_COLORS.medium, color: "#222", border: "none" }} onClick={() => start("medium")} disabled={!pool.length}>Medium (4s)</button>
+          <button className="btn" style={{ background: MODE_COLORS.medium, color: "#fff", border: "none" }} onClick={() => start("medium")} disabled={!pool.length}>Medium (4s)</button>
           <button className="btn" style={{ background: MODE_COLORS.hard, color: "#fff", border: "none" }} onClick={() => start("hard")} disabled={!pool.length}>Hard (3s)</button>
         </div>
         {!pool.length && <p className="muted" style={{ marginTop: 8 }}>Loading questions…</p>}

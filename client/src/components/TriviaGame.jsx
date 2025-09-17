@@ -93,10 +93,11 @@ export default function TriviaGame({ roomId, isHost }){
     return (
       <div className="card">
         <h4>Trivia — Vibe Coding Edition</h4>
-        <p className="muted">Need at least {minPlayers} players. Everyone must click Ready.</p>
+        <strong>Need at least {minPlayers} players.</strong>
+        <p>Everyone must click Ready.</p>
 
         <div className="space" />
-        <ReadyButton meReady={meReady} toggleReady={guardedToggle} disabled={players.length < minPlayers} />
+        <ReadyButton meReady={meReady} toggleReady={guardedToggle}/>
         <div className="space" />
         <ul>
           {players.map(p => (
@@ -153,7 +154,7 @@ export default function TriviaGame({ roomId, isHost }){
           ))}
         </div>
 
-        <p className="muted" style={{marginTop:12}}>Toggle Ready in the lobby to start another round.</p>
+        {/* <p className="muted" style={{marginTop:12}}>Toggle Ready in the lobby to start another round.</p> */}
       </div>
     );
   }
@@ -170,7 +171,7 @@ export default function TriviaGame({ roomId, isHost }){
         </div>
       </div>
 
-      <p style={{fontSize:18, marginTop:6}}>{q?.text}</p>
+      <p style={{fontSize:18, marginTop:6, color:"black"}}>{q?.text}</p>
       <div className="grid" style={{gridTemplateColumns:"1fr 1fr", gap:12}}>
         {(q?.choices || []).map((c, i) => {
           const isChosen = answeredIdx === i;
@@ -180,7 +181,7 @@ export default function TriviaGame({ roomId, isHost }){
           return (
             <button key={i}
               className="btn"
-              style={{ padding:"14px 16px", border:"1px solid #ddd", background: bg }}
+              style={{ padding:"14px 16px", border:"1px solid #ddd",color:"black", background: bg }}
               onClick={() => answer(i)}
               disabled={answeredIdx !== null}
             >

@@ -207,12 +207,14 @@ function answer(roomId, playerId, choiceIndex, timeLeftSeconds = 0){
   _ensurePlayerArrays(g, playerId);
   g.responses.get(playerId)[g.idx] = Number(choiceIndex); // store DISPLAY index picked
   if (correct){
-    const s = g.scores.get(playerId);
-    if (s){
-      const bonus = Math.max(0, Number(timeLeftSeconds)|0) * 2; // faster → more points
-      s.score += 10 + bonus;
-    }
+  const s = g.scores.get(playerId);
+  if (s){
+    const tl = Math.max(0, Number(timeLeftSeconds) | 0);   // seconds left (0..10)
+    const bonusSeconds = Math.max(0, Math.min(tl - 5, 5)); // only count seconds above 5
+    const bonus = bonusSeconds * 2;                        // same 2 pts/sec
+    s.score += 10 + bonus;                                 // base 10 + capped bonus
   }
+}
   const activeCount = Array.from(g.scores.values()).filter(s => s.active).length;
   const allAnswered = g.answered.size >= activeCount && activeCount > 0;
   if (allAnswered) g.locked = true; // pause answers during the 0.5s reveal

@@ -51,7 +51,7 @@ const server = http.createServer(app);
 const io = new Server(server, { cors: { origin: "*" } });
 
 const LOBBY_COUNTDOWN = 5; // seconds before start when everyone ready
-const QUESTION_COUNTDOWN = 5; // seconds per question
+const QUESTION_COUNTDOWN = 10 // seconds per question
 const NEXT_DELAY_MS = 500; // 0.5s reveal pause between questions
 
 const lobbyCountdowns = new Map(); // roomId -> { timer }

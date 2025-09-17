@@ -1,0 +1,50 @@
+# --- OS junk ---
+.DS_Store
+Thumbs.db
+
+# --- Node / package managers ---
+node_modules/
+**/node_modules/
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+
+# --- Build outputs ---
+dist/
+**/dist/
+build/
+**/build/
+coverage/
+**/coverage/
+*.tsbuildinfo
+.eslintcache
+
+# --- Vite / tool caches ---
+.vite/
+**/.vite/
+
+# --- Environment files (keep examples committed separately) ---
+.env
+.env.*
+client/.env
+client/.env.*
+server/.env
+server/.env.*
+
+# --- Editor / IDE ---
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# --- Server data (demo persistence) ---
+server/data/users.json
+server/data/*.db
+# Keep the question set tracked
+!server/data/questions.json
+
+# --- Misc ---
+.pnp.cjs
+.pnp.loader.mjs
