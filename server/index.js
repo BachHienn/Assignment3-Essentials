@@ -144,7 +144,7 @@ function maybeNotifyLastPlayer(roomId){
       const last = r.players[0];
       cancelLobbyCountdown(roomId);
       cancelQuestionTimer(roomId);
-      io.to(last.id).emit("room:abandoned", { roomId, reason: "everyone_left" });
+      io.to(last.socketId).emit("room:abandoned", { roomId, reason: "everyone_left" });
     } else if (r.players.length === 0){
       cancelLobbyCountdown(roomId);
       cancelQuestionTimer(roomId);

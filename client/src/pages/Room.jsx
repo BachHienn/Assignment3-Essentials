@@ -56,8 +56,8 @@ export default function Room(){
       </div>
 
       <p className="muted">Players in room:</p>
-      <ul>
-        {(room?.players || []).map(p => <li key={p.id}>• {p.name}{p.id===room?.hostId?" (host)":""}</li>)}
+      <ul >
+        {(room?.players || []).map(p => <li style={{listStyle:"none"}} key={p.id}>• {p.name}{p.id===room?.hostId?" (host)":""}</li>)}
       </ul>
 
       <div className="space" />

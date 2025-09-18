@@ -22,8 +22,7 @@ export default function CreateRoomForm(){
 
   return (
     <div className="card">
-      <h4>Create a Room</h4>
-      <p className="muted">Room code will be generated automatically. You can add an optional short description.</p>
+      <h4 className="muted">Room code will be generated automatically. You can add an optional short description.</h4>
       <div className="space" />
       <textarea
         value={label}

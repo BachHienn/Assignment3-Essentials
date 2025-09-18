@@ -148,6 +148,73 @@ input:focus,select:focus,textarea:focus{ border-color:#FFCCAA; box-shadow:0 0 0 
 .site-header .inner{ display:flex; align-items:center; justify-content:space-between; padding:10px 20px; }
 .brand{ font-weight:900; letter-spacing:.3px; }
 
+/* Default pill buttons */
+header .pill {
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff !important;
+  border: none;
+  transition: background 0.25s ease, transform 0.15s ease;
+  padding: 6px 14px;
+  border-radius: 20px;
+  text-decoration: none;
+}
+
+/* Hover */
+header .pill:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+}
+
+/* Active */
+header .pill.active {
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  color: #fff !important;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+}
+
+/* Sparkling background */
+/* Sparkling background with galaxy gradient */
+/* Sparkling background with fiery gradient */
+.sparkle-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
+  overflow: hidden;
+  z-index: -1;
+}
+
+/* Sparkle dots */
+.sparkle {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  opacity: 0.8;
+  animation: sparkleAnim 3s linear infinite;
+  background: white;
+}
+
+/* Color variety for sparkles */
+.sparkle:nth-child(3n)   { background: #ffd166; } /* yellow */
+.sparkle:nth-child(3n+1) { background: #06d6a0; } /* teal */
+.sparkle:nth-child(3n+2) { background: #ef476f; } /* coral */
+
+
+@keyframes sparkleAnim {
+  from {
+    transform: translateY(0) scale(1);
+    opacity: 0.8;
+  }
+  to {
+    transform: translateY(-100vh) scale(0.2);
+    opacity: 0;
+  }
+}
+
 /* ---------- Animations / micro‑interactions ---------- */
 @keyframes flashRed{ 0%{ background:#FBE3E3 } 100%{ background:transparent } }
 .flash-red{ animation: flashRed 420ms ease-in-out; }
@@ -158,6 +225,12 @@ input:focus,select:focus,textarea:focus{ border-color:#FFCCAA; box-shadow:0 0 0 
 @keyframes slideUp{ 0%{ transform:translateY(8px); opacity:0 } 100%{ transform:translateY(0); opacity:1 } }
 .slide-up{ animation: slideUp .22s ease-out; }
 
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-12px); }
+  100% { transform: translateY(0px); }
+}
+
 /* ---------- Game specific niceties ---------- */
 .timer-pill{ background:#FFF4EA; border:1px solid var(--border); color:#6E4A41; }
 .answer.correct{ background:#EDFBF4; border-color:#CDEBDD; }
@@ -165,6 +238,19 @@ input:focus,select:focus,textarea:focus{ border-color:#FFCCAA; box-shadow:0 0 0 
 
 /* Cards that reflect readiness */
 .ready-card{ border-color:#CDEBDD; background:linear-gradient(180deg,#F4FFF8,#F9FFFC) }
+
+/* ---------- Footer---------- */
+footer a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.25s ease;
+}
+
+footer a:hover {
+  color: #ffd166; /* glowing yellow */
+}
+
+
 
 /* ---------- Media ---------- */
 img,video{ max-width:100%; height:auto; border-radius:12px; }

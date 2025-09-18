@@ -65,7 +65,6 @@ export default function TriviaGame({ roomId, isHost }){
   }, [state]);
 
   function emitToggleReady(){ socket.emit("game:ready", { roomId, ready: !meReady }); }
-  function next(){ socket.emit("game:next", { roomId }); }
   function answer(i){
     if (answeredIdx !== null) return;
     setAnsweredIdx(i);
@@ -101,7 +100,7 @@ export default function TriviaGame({ roomId, isHost }){
         <div className="space" />
         <ul>
           {players.map(p => (
-            <li key={p.id}>• {p.name} {p.ready ? "✅" : "⏳"}</li>
+            <li style={{listStyle:"none"}} key={p.id}>• {p.name} {p.ready ? "✅" : "⏳"}</li>
           ))}
         </ul>
 
@@ -167,9 +166,10 @@ export default function TriviaGame({ roomId, isHost }){
         <h4>Vibe Coding Trivia — Question {state.idx + 1} / {state.total}</h4>
         <div style={{display:"flex", gap:12, alignItems:"center"}}>
           <div className="pill">⏱ {qCountdown ?? 0}s</div>
-          {isHost && <button className="btn" onClick={next}>Skip ▷</button>}
         </div>
       </div>
+      <h2 className="muted" style={{color:"red"}} >GAME WILL END IF EVERYONE LEAVE</h2>
+
 
       <p style={{fontSize:18, marginTop:6, color:"black"}}>{q?.text}</p>
       <div className="grid" style={{gridTemplateColumns:"1fr 1fr", gap:12}}>

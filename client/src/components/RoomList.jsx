@@ -25,7 +25,6 @@ const alreadyInRoom = (room) => me && room.players.some(p => (p.name || "").toLo
 
 return (
 <div className="card">
-<h4>Active Rooms</h4>
 {rooms.length === 0 && (<p className="muted">No rooms yet. Create one!</p>)}
 <div className="grid">
 {rooms.map(room => {
