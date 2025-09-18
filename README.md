@@ -39,7 +39,7 @@ A collaborative, real‑time trivia game that showcases **Vibe Coding** principl
 ## Overview
 **Vibe Coding Trivia** is a web app where players race to answer questions under time pressure. It supports:
 - **Single‑player:** fast local play; 15 shuffled questions per round.
-- **Multiplayer:** rooms (default max **4** players, configurable), live lobby, ready checks, countdowns, synchronized timers and answers, instant correctness feedback, and a final scoreboard + per‑player review.
+- **Multiplayer:** rooms (max **10** players), live lobby, ready checks, countdowns, synchronized timers and answers, instant correctness feedback, and a final scoreboard + per‑player review.
 
 ## Why this project (Vibe Coding)
 - Encourages **creative collaboration** (pairing, short feedback loops) while building a playful experience.
@@ -185,19 +185,6 @@ We built a web‑based trivia game to explore **Vibe Coding**—cultivating a fu
 - **Goal:** single‑player mode for rapid iteration → **Achieved**.
 - **Goal:** demonstrate Vibe Coding: pairing, short feedback loops, ethical AI use → **Achieved** with iterative commits and documented AI usage.
 
-### Group Roles & Contributions
-Use this template (fill with your names):
-
-| Role | Owner | Highlights |
-|------|-------|-----------|
-| Product/PM | _Name_ | Scope, backlog, demos |
-| Backend | _Name_ | Express routes, Socket.IO, game engine, scoring |
-| Frontend | _Name_ | React components, state, responsive CSS |
-| UX/Visual | _Name_ | Theme system, interactions, accessibility |
-| QA/Docs | _Name_ | Test plans, README, rubric mapping |
-
-> Each PR should include a short note on who paired/reviewed and why decisions were made.
-
 ### Development Instructions
 - See [Getting Started](#getting-started). Make sure `.env` is set up on both client and server.
 - For **Google login**, register OAuth credentials and add `VITE_GOOGLE_CLIENT_ID` (client) and `GOOGLE_CLIENT_ID` (server) if you enable that feature.
@@ -209,23 +196,23 @@ Use this template (fill with your names):
 - Question content is academic/demo; avoid copyrighted material when expanding the question bank.
 
 ## Testing Checklist
-- [ ] Register/login/logout flow
-- [ ] Header reflects auth state across navigation
-- [ ] Create room → join/leave → capacity/full alerts
-- [ ] Duplicate join guarded
-- [ ] Ready/unready + auto‑unready on join/leave
-- [ ] 3s pre‑start countdown
-- [ ] Per‑question countdown + 0.5s reveal, auto‑advance
-- [ ] Score updates with speed bonus (first 5s only)
-- [ ] Mid‑game disconnect → others continue; last player alerted & returned
-- [ ] Final scoreboard + per‑player answer review
-- [ ] Single‑player: 15 questions, shuffles each run
-- [ ] Responsive layout on mobile/tablet
+- ✅ Register/login/logout flow
+- ✅ Header reflects auth state across navigation
+- ✅ Create room → join/leave → capacity/full alerts
+- ✅ Duplicate join guarded
+- ✅ Ready/unready + auto‑unready on join/leave
+- ✅ 3s pre‑start countdown
+- ✅ Per‑question countdown + 0.1s reveal, auto‑advance
+- ✅ Score updates with speed bonus (first 5s only)
+- ✅ Mid‑game disconnect → others continue; last player alerted & returned
+- ✅ Final scoreboard + per‑player answer review
+- ✅ Single‑player: 15 questions, shuffles each run
+- ✅ Responsive layout on mobile/tablet
 
 ## Roadmap
 - ✅ Per‑player results & review
 - ✅ Hidden rooms during active games
-- ⏳ Google login (optional)
+- ✅ Google login
 - ⏳ Admin: question editor UI
 - ⏳ Spectator mode
 - ⏳ Persistent rooms & match history (DB)
