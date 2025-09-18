@@ -50,14 +50,18 @@ app.get("/questions", async (req, res) => {
 
 
 const server = http.createServer(app);
+const NETLIFY_ORIGIN = (process.env.NETLIFY_URL || "")
+  .replace(/^([^/]+)/, (m) => (m.startsWith("http") ? m : `https://${m}`))
+  .replace(/\/+$/, "");
+
 const io = new Server(server, {
   cors: {
     origin: [
-      `http://localhost:${PORT}`,  // local dev
-      NETLIFY_URL                  // deployed frontend
+      `http://localhost:5173`,              // dev vite port (or your exact dev origin)
+      NETLIFY_ORIGIN
     ],
-    methods: ["GET", "POST"],
-    credentials: true
+    methods: ["GET", "POST", "OPTIONS"],
+    credentials: true                       // set to false if not using cookies/auth
   }
 });
 
@@ -144,7 +148,7 @@ function maybeNotifyLastPlayer(roomId){
       const last = r.players[0];
       cancelLobbyCountdown(roomId);
       cancelQuestionTimer(roomId);
-      io.to(last.socketId).emit("room:abandoned", { roomId, reason: "everyone_left" });
+      io.to(last.id).emit("room:abandoned", { roomId, reason: "everyone_left" });
     } else if (r.players.length === 0){
       cancelLobbyCountdown(roomId);
       cancelQuestionTimer(roomId);
