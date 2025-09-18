@@ -10,6 +10,8 @@ import path from "path";
 import { fileURLToPath } from "url";
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 import dotenv from 'dotenv';
+const PORT = process.env.PORT || 3001;
+const NETLIFY_URL = process.env.NETLIFY_URL;
 dotenv.config();
 
 const app = express();
@@ -48,7 +50,16 @@ app.get("/questions", async (req, res) => {
 
 
 const server = http.createServer(app);
-const io = new Server(server, { cors: { origin: "*" } });
+const io = new Server(server, {
+  cors: {
+    origin: [
+      `http://localhost:${PORT}`,  // local dev
+      NETLIFY_URL                  // deployed frontend
+    ],
+    methods: ["GET", "POST"],
+    credentials: true
+  }
+});
 
 const LOBBY_COUNTDOWN = 5; // seconds before start when everyone ready
 const QUESTION_COUNTDOWN = 10 // seconds per question
@@ -260,5 +271,5 @@ io.on("connection", (socket) => {
   socket.on("game:get", ({ roomId } = {}, ack) => { ack?.({ ok:true, state: game.get(roomId) }); });
 });
 
-const PORT = process.env.PORT || 3001;
+
 server.listen(PORT, () => console.log(`Server running on http://localhost:${PORT}`));
