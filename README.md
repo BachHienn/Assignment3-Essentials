@@ -27,7 +27,6 @@ A collaborative, real‑time trivia game that showcases **Vibe Coding** principl
 - [Documentation for Assessment](#documentation-for-assessment)
   - [Project Overview](#project-overview)
   - [Goals & Achievements](#goals--achievements)
-  - [Group Roles & Contributions](#group-roles--contributions)
   - [Development Instructions](#development-instructions)
   - [Ethics & AI Use](#ethics--ai-use)
 - [Testing Checklist](#testing-checklist)
