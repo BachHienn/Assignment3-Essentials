@@ -50,24 +50,20 @@ app.get("/questions", async (req, res) => {
 
 
 const server = http.createServer(app);
-const NETLIFY_ORIGIN = (process.env.NETLIFY_URL || "")
-  .replace(/^([^/]+)/, (m) => (m.startsWith("http") ? m : `https://${m}`))
-  .replace(/\/+$/, "");
-
 const io = new Server(server, {
   cors: {
     origin: [
-      `http://localhost:5173`,              // dev vite port (or your exact dev origin)
-      NETLIFY_ORIGIN
+      `http://localhost:${PORT}`,  // local dev
+      NETLIFY_URL                  // deployed frontend
     ],
-    methods: ["GET", "POST", "OPTIONS"],
-    credentials: false                       // set to false if not using cookies/auth
+    methods: ["GET", "POST"],
+    credentials: true
   }
 });
 
 const LOBBY_COUNTDOWN = 5; // seconds before start when everyone ready
 const QUESTION_COUNTDOWN = 10 // seconds per question
-const NEXT_DELAY_MS = 500; // 0.5s reveal pause between questions
+const NEXT_DELAY_MS = 1000; // 0.5s reveal pause between questions
 
 const lobbyCountdowns = new Map(); // roomId -> { timer }
 const questionTimers  = new Map(); // roomId -> { timer, secs }

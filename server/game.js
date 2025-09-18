@@ -244,4 +244,13 @@ function resultsFor(roomId, playerId){
   return out;
 }
 
-export { games, addPlayer, removePlayer, clearGame, setReady, start, next, answer, get, lock, resultsFor, unreadyAll };
+function currentReveal(roomId){
+  const g = games.get(roomId);
+  if (!g || g.idx < 0 || g.idx >= g.questions.length) return null;
+  const q = g.questions[g.idx];
+  const order = g.orders[g.idx] || q.choices.map((_, idx) => idx);
+  const correctDisplayIndex = order.findIndex(ix => ix === q.answerIndex);
+  return { correctDisplayIndex };
+}
+
+export { games, addPlayer, removePlayer, clearGame, setReady, start, next, answer, get, lock, resultsFor, unreadyAll, currentReveal };
