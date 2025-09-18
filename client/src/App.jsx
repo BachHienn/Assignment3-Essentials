@@ -90,7 +90,7 @@ export default function App(){
         <div className="container" style={{display:"flex", justifyContent:"space-between", alignItems:"center"}}>
           <Link to="/" onClick={handleGuardedClick("/")} style={{textDecoration:"none"}}><h2>🎉 Trivia Task Game</h2></Link>
           <nav className="row" style={{gap:12, alignItems:"center"}}>
-            <Link to="/" onClick={handleGuardedClick("/")} className="pill" aria-current={pathname === "/"}>Home</Link>
+            <Link to="/" onClick={handleGuardedClick("/")} className="pill" aria-current={pathname === "/"} style={{backgroundColor:"#FFFDFB", fontSize:"1.25rem"}}>Home</Link>
             {user ? (
               <div ref={menuRef} style={{position:"relative"}}>
                 <button className="btn" onClick={() => setMenuOpen(o => !o)} aria-haspopup="menu" aria-expanded={menuOpen}>

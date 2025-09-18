@@ -3,18 +3,7 @@
     "username": "hien",
     "passwordHash": "$2a$10$sdfNabm13Bvj0A88fNXaH.FLTCe6YMuFQRQ0PPO.ygWl0rJVVZEIy",
     "createdAt": "2025-09-14T23:08:19.954Z"
-  },
-  {
-    "username": "b-ch-hi-n",
-    "provider": "google",
-    "googleId": "118411892956728568995",
-    "email": "jackiefablek21@gmail.com",
-    "createdAt": "2025-09-15T06:51:41.221Z"
-  },
-  {
-    "username": "hien1",
-    "passwordHash": "$2a$10$xO1.r7vxPZfAkU3j6zKba.mVgWc03BXYcgaOhC5WrV6f6D5FvFnYS",
-    "provider": "local",
-    "createdAt": "2025-09-17T07:23:45.240Z"
   }
+  
+
 ]
