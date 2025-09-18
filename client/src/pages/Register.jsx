@@ -105,7 +105,7 @@ export default function Register() {
           )}
           <div style={{ marginTop: 16, fontSize: 14 }}>
             Already have an account?{" "}
-            <a href="/login" style={{ color: "var(--primary)", fontWeight: 600 }}>
+            <a href="#" onClick={() => navigate("/login")} style={{ color: "var(--primary)", fontWeight: 600 }}>
               Login
             </a>
           </div>

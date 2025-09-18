@@ -190,7 +190,7 @@ export default function Login() {
 
           <div style={{ marginTop: 16, fontSize: 14 }}>
             Don’t have an account?{" "}
-            <a href="/register" style={{ color: "var(--primary)", fontWeight: 600 }}>
+            <a href="#" onClick={() => navigate("/register")} style={{ color: "var(--primary)", fontWeight: 600 }}>
               Create one
             </a>
           </div>
