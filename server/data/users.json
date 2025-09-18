@@ -3,7 +3,17 @@
     "username": "hien",
     "passwordHash": "$2a$10$sdfNabm13Bvj0A88fNXaH.FLTCe6YMuFQRQ0PPO.ygWl0rJVVZEIy",
     "createdAt": "2025-09-14T23:08:19.954Z"
+  },
+  {
+    "username": "adam",
+    "passwordHash": "$2a$10$KFjmcdh3Dif1WOU9M817SOH7VwBY9pKicKnV1exqnEDbnTY6IZSlO",
+    "provider": "local",
+    "createdAt": "2025-09-18T06:00:52.957Z"
+  },
+  {
+    "username": "tien",
+    "passwordHash": "$2a$10$IPWKo3b/zn1y/cwiAHwco.UgZWF.PbGzzDaP6ZMxkSzD6HPk6ofx.",
+    "provider": "local",
+    "createdAt": "2025-09-18T06:04:56.948Z"
   }
-  
-
 ]
