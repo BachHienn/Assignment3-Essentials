@@ -1,57 +1,1712 @@
 [
-  { "text": "What does 'Vibe Coding' emphasize most?", "choices": ["Pure algorithmic speed", "Creativity & collaboration", "Only strict style guides", "Hardware tuning"], "answerIndex": 1 },
-  { "text": "Which practice best supports flow in a team?", "choices": ["Loud open-office alerts", "Short feedback loops & pairing", "Async PR reviews only", "Weekend-only sprints"], "answerIndex": 1 },
-  { "text": "Ethical use of AI tools means…", "choices": ["Never disclosing AI assistance", "Attribution, evaluation, and accountability", "Copying any code from the web", "Letting AI commit directly to main"], "answerIndex": 1 },
-  { "text": "A good 'vibe' in codebases feels like…", "choices": ["Hostile & gatekept", "Welcoming, documented, and playful", "Ambiguous ownership", "Random configs"], "answerIndex": 1 },
-  { "text": "Which ritual strengthens creative collaboration?", "choices": ["Solo merges only", "Blameless retros", "No standups ever", "1-year release cycles"], "answerIndex": 1 },
-  { "text": "Pair programming is most valuable when…", "choices": ["Tasks are trivial and repetitive", "You need knowledge transfer and design thinking", "You want to avoid code reviews", "You want double the typing speed"], "answerIndex": 1 },
-  { "text": "Short iterations help teams because they…", "choices": ["Increase planning overhead", "Provide fast feedback and reduce risk", "Delay feedback until the end", "Eliminate the need for tests"], "answerIndex": 1 },
-  { "text": "A good commit message should primarily…", "choices": ["List all changed files", "Describe why the change matters and its impact", "Repeat the ticket number only", "Use memes for fun"], "answerIndex": 1 },
-  { "text": "A blameless retrospective focuses on…", "choices": ["Finding the person at fault", "Improving systems and processes", "Ranking teammates", "Hiding incidents"], "answerIndex": 1 },
-  { "text": "In code reviews, a constructive first step is to…", "choices": ["Nitpick variable names", "Ask clarifying questions and confirm intent", "Reject anything unfamiliar", "Rewrite the code yourself"], "answerIndex": 1 },
-  { "text": "Teams encourage flow state by…", "choices": ["Maximizing context switching", "Minimizing interruptions and WIP", "Scheduling back-to-back meetings", "Using only dark mode"], "answerIndex": 1 },
-  { "text": "Prototypes are primarily for…", "choices": ["Immediate production release", "Learning and reducing uncertainty", "Perfecting pixel details", "Replacing documentation"], "answerIndex": 1 },
-  { "text": "An accessibility best practice is…", "choices": ["Decorative-only alt text", "Sufficient color contrast and semantic HTML", "Click targets under 24px", "Tab order by visual layout only"], "answerIndex": 1 },
-  { "text": "Inclusive naming in codebases…", "choices": ["Is unnecessary ceremony", "Improves clarity and avoids alienation", "Hurts performance", "Should mirror inside jokes"], "answerIndex": 1 },
-  { "text": "Using open-source responsibly means…", "choices": ["Ignoring license terms", "Respecting licenses and giving attribution", "Hard-forking everything", "Copy-pasting without credit"], "answerIndex": 1 },
-  { "text": "Which branching strategy best supports collaboration?", "choices": ["Long-lived feature branches", "Trunk-based with small frequent PRs", "Direct commits to main without review", "One mega-PR per quarter"], "answerIndex": 1 },
-  { "text": "Good logging should be…", "choices": ["Verbose everywhere", "Actionable, structured, and not noisy", "Only errors, never context", "Written after incidents"], "answerIndex": 1 },
-  { "text": "For creative/UX-heavy code, tests should favor…", "choices": ["Brittle unit tests of CSS", "Behavioral and integration tests", "No tests—manual only", "Randomized snapshots"], "answerIndex": 1 },
-  { "text": "Responsive UX means…", "choices": ["Animations for everything", "Immediate feedback after actions", "Only server-side renders", "Hiding errors"], "answerIndex": 1 },
-  { "text": "When integrating AI-generated code, you should…", "choices": ["Merge without review", "Review critically and run tests", "Skip tests to move fast", "Assume correctness"], "answerIndex": 1 },
-  { "text": "Healthy conflict resolution starts with…", "choices": ["Winning the argument", "Focusing on shared goals and data", "Escalating to executives", "Public call-outs"], "answerIndex": 1 },
-  { "text": "Great comments typically explain…", "choices": ["What the code does line-by-line", "Why a decision was made", "The author’s mood", "Unrelated TODOs"], "answerIndex": 1 },
-  { "text": "Smooth onboarding often includes…", "choices": ["A README with quickstart scripts", "A giant monolithic wiki", "Pairing discouraged", "Only tribal knowledge"], "answerIndex": 1 },
-  { "text": "Prefer performance micro-optimizations…", "choices": ["Before measuring", "Only after profiling reveals bottlenecks", "Never", "By default in prototypes"], "answerIndex": 1 },
-  { "text": "Git hygiene tip: before opening a PR…", "choices": ["Rebase/sync a small branch and ensure tests pass", "Force-push to main", "Squash everyone’s commits", "Rename the repo"], "answerIndex": 1 },
-  { "text": "Better estimation often starts with…", "choices": ["Slicing scope and defining acceptance criteria", "Adding buffer to everything", "Guessing in hours", "Avoiding unknowns"], "answerIndex": 1 },
-  { "text": "Creative constraints help because they…", "choices": ["Spark ideas and focus effort", "Limit imagination", "Are only for art", "Slow delivery"], "answerIndex": 1 },
-  { "text": "Effective daily standups are…", "choices": ["Short, focused on blockers and next steps", "Status monologues", "45 minutes minimum", "Code reviews in disguise"], "answerIndex": 1 },
-  { "text": "Safer releases use…", "choices": ["Feature flags and rollback plans", "Friday night deploys", "Manual FTP uploads", "Hotfixes to main only"], "answerIndex": 1 },
-  { "text": "Lightweight user research that fits small teams…", "choices": ["Think-aloud tests with ~5 users", "Lab studies with 100 participants", "Only analytics, never talking to users", "Skip research to ship"], "answerIndex": 1 },
-  { "text": "CI pipeline best practice is…", "choices": ["Running only on Fridays", "Fast, reliable, and visible", "Manual steps everywhere", "No tests in CI"], "answerIndex": 1 },
-  { "text": "Effective code ownership is…", "choices": ["A single gatekeeper for all code", "Shared ownership with clear areas", "No ownership at all", "Ownership by title only"], "answerIndex": 1 },
-  { "text": "To reduce merge conflicts, teams should…", "choices": ["Batch work for weeks", "Integrate frequently (small PRs)", "Commit to long-lived branches", "Avoid code reviews"], "answerIndex": 1 },
-  { "text": "Refactoring works best when it is…", "choices": ["Deferred indefinitely", "Done alongside new changes", "Only during emergencies", "A big bang rewrite"], "answerIndex": 1 },
-  { "text": "Living documentation is usually…", "choices": ["In random chat threads", "Close to the code (README, docstrings)", "On a private whiteboard", "In someone’s memory"], "answerIndex": 1 },
-  { "text": "Feature toggles mainly help teams…", "choices": ["Ship hidden malware", "Safely ship incomplete work", "Avoid writing tests", "Remove code reviews"], "answerIndex": 1 },
-  { "text": "Good incident postmortems are…", "choices": ["Punitive and personal", "Blameless and actionable", "Optional and secret", "Focused on punishment"], "answerIndex": 1 },
-  { "text": "Product discovery often includes…", "choices": ["Only analytics dashboards", "Talking to users and exploring problems", "Skipping validation", "Building first, asking later"], "answerIndex": 1 },
-  { "text": "Technical debt should be…", "choices": ["Ignored forever", "Deliberately managed and prioritized", "Hidden from stakeholders", "Erased from the backlog"], "answerIndex": 1 },
-  { "text": "A great way to slice stories is…", "choices": ["By database table", "Vertical slices delivering user value", "By team boundaries", "Only backend first"], "answerIndex": 1 },
-  { "text": "Ideal pull requests are…", "choices": ["Massive with thousands of lines", "Small, focused, and reviewable", "Without descriptions", "Pushed straight to main"], "answerIndex": 1 },
-  { "text": "Healthy review etiquette favors…", "choices": ["Waiting days to reply", "Quick responses to keep flow", "Drive-by approvals", "Public shaming"], "answerIndex": 1 },
-  { "text": "On-call health requires…", "choices": ["1 person always on", "Rotations + runbooks + SLOs", "Ignoring alerts", "Weekend-only paging"], "answerIndex": 1 },
-  { "text": "Design systems mainly provide…", "choices": ["Random component names", "Consistency and faster iteration", "Bigger bundles only", "Less accessibility"], "answerIndex": 1 },
-  { "text": "Pairing works best when…", "choices": ["One types, one watches silently", "Partners switch roles and discuss", "Only the senior drives", "Nobody asks questions"], "answerIndex": 1 },
-  { "text": "A better naming habit is to…", "choices": ["Use single letters", "Use intent‑revealing names", "Prefer internal jokes", "Encode ticket IDs only"], "answerIndex": 1 },
-  { "text": "Balanced testing strategy resembles…", "choices": ["Only end‑to‑end tests", "Unit + integration with few e2e", "No tests at all", "Random manual tests"], "answerIndex": 1 },
-  { "text": "If the build fails, the team should…", "choices": ["Ignore and keep merging", "Stop and fix it first", "Deploy anyway", "Comment it out"], "answerIndex": 1 },
-  { "text": "A code smell usually indicates…", "choices": ["Personal failure", "An opportunity for design improvement", "Immediate rewrite", "That code is perfect"], "answerIndex": 1 },
-  { "text": "Effective team retros are…", "choices": ["Optional and rare", "Regular, short, and honest", "Only when things break", "Hours of status updates"], "answerIndex": 1 },
-  { "text": "Good backlog grooming means…", "choices": ["Adding everything forever", "Prioritizing, clarifying, and pruning", "Letting it rot", "Only executives edit"], "answerIndex": 1 },
-  { "text": "To improve performance safely, first…", "choices": ["Guess and micro‑optimize", "Profile to find bottlenecks", "Rewrite in C++", "Disable logging everywhere"], "answerIndex": 1 },
-  { "text": "A healthy team culture values…", "choices": ["Heroics and burnout", "Psychological safety and learning", "Competition only", "Hidden knowledge"], "answerIndex": 1 },
-  { "text": "When planning, it's best to…", "choices": ["Lock scope up front", "Slice scope and iterate with feedback", "Avoid assumptions mapping", "Ignore risks"], "answerIndex": 1 },
-  { "text": "Feature kickoff should start with…", "choices": ["Picking a tech stack first", "Clearly defined outcomes and constraints", "Mocking the competitor", "Assigning blame"], "answerIndex": 1 }
+  {
+    "text": "What is the main purpose of studying ethics in IT?",
+    "choices": [
+      "To increase profits",
+      "To understand values and make better decisions",
+      "To learn programming skills",
+      "To reduce costs"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "text": "Which of the following best defines ethics?",
+    "choices": [
+      "Study of money",
+      "Branch of philosophy about right and wrong",
+      "Study of human behavior in society",
+      "Law enforcement rules"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "text": "Which of the following is true?",
+    "choices": [
+      "Ethical and legal are always the same",
+      "Legal can be unethical",
+      "Ethical is always illegal",
+      "Ethics is irrelevant to IT"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "text": "The Rights Lens focuses on:",
+    "choices": [
+      "Treating people fairly",
+      "Respecting the rights of all stakeholders",
+      "Producing the most good",
+      "Serving the community"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "text": "The Justice Lens emphasizes:",
+    "choices": [
+      "Producing maximum happiness",
+      "Fairness and equality",
+      "Respecting privacy only",
+      "Following personal values"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "text": "The Utilitarian Lens asks:",
+    "choices": [
+      "Which action benefits me most?",
+      "Which option maximizes good and minimizes harm?",
+      "Which option is legal?",
+      "Which option is traditional?"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "text": "Which ethical lens emphasizes relationships and empathy?",
+    "choices": [
+      "Rights Lens",
+      "Care Ethics Lens",
+      "Utilitarian Lens",
+      "Justice Lens"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "text": "What is the first step in the Ethical Decision-Making Framework?",
+    "choices": [
+      "Choose an action",
+      "Get the facts",
+      "Identify ethical issues",
+      "Evaluate outcomes"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "text": "What is the final step in the Ethical Decision-Making Framework?",
+    "choices": [
+      "Get the facts",
+      "Implement and reflect",
+      "Evaluate stakeholders",
+      "Choose an option"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "text": "Why is studying ethics important in IT?",
+    "choices": [
+      "IT has no ethical issues",
+      "IT technologies bring new ethical complexities",
+      "To avoid exams",
+      "To make programming easier"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "text": "Which is an example of an ethical but illegal act?",
+    "choices": [
+      "Paying taxes",
+      "Helping refugees cross borders",
+      "Lying to a customer",
+      "Writing code"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "text": "Which is an example of legal but unethical behavior?",
+    "choices": [
+      "Donating money to charity",
+      "Using customer data without consent",
+      "Recycling plastic",
+      "Helping the disabled"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "text": "In the transport app scenario, what does Option A do?",
+    "choices": [
+      "Takes the system offline to fix vulnerability",
+      "Keeps service running but risks data",
+      "Ignores the vulnerability",
+      "Sells data to advertisers"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "text": "Who may suffer long-term impacts in case of a data breach?",
+    "choices": [
+      "Hackers",
+      "All affected users",
+      "Commuters",
+      "Politicians only"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "text": "What does the Markkula Center provide?",
+    "choices": [
+      "Programming resources",
+      "A framework for ethical decision-making",
+      "IT equipment",
+      "Legal textbooks"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "text": "Which ethical approach emphasizes virtues such as kindness and courage?",
+    "choices": [
+      "Deontology",
+      "Virtue ethics",
+      "Consequentialism",
+      "Utilitarianism"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "text": "Which ethical approach emphasizes following rules or principles?",
+    "choices": [
+      "Virtue ethics",
+      "Deontology",
+      "Consequentialism",
+      "Relativism"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "text": "Which ethical approach evaluates actions based on their results?",
+    "choices": [
+      "Virtue ethics",
+      "Consequentialism",
+      "Deontology",
+      "Care ethics"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "text": "The Golden Rule is often summarized as:",
+    "choices": [
+      "Always obey the law",
+      "Treat others as you would like to be treated",
+      "Do whatever benefits you most",
+      "Respect authority at all times"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "text": "What is a weakness of the Golden Rule?",
+    "choices": [
+      "It ignores consequences",
+      "It may only apply to one’s peers",
+      "It only works in business",
+      "It cannot be applied in IT"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "text": "The Trolley Problem highlights:",
+    "choices": [
+      "Always following laws",
+      "Decisions that are both good and bad",
+      "The importance of speed in decisions",
+      "Ethical neutrality"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "text": "Which of the following is an example of deontology?",
+    "choices": [
+      "Saving lives regardless of rules",
+      "Following company regulations",
+      "Maximizing happiness",
+      "Acting based on empathy"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "text": "Which of the following best describes professional ethics?",
+    "choices": [
+      "Personal preferences",
+      "Principles governing professionals’ behavior",
+      "Government laws only",
+      "Religious teachings only"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "text": "Professional ethics are often supported by:",
+    "choices": [
+      "Random choices",
+      "Legal frameworks",
+      "Marketing strategies",
+      "Technical manuals"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "text": "Which principle is NOT part of the ACS Code of Conduct?",
+    "choices": [
+      "Honesty",
+      "Profit Maximization",
+      "Competence",
+      "Public Interest"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "text": "According to ACS, the primacy of the public interest means:",
+    "choices": [
+      "Company profit comes first",
+      "Public interest overrides personal and business interests",
+      "Stakeholders always win",
+      "Customers can be ignored"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "text": "Which ACS code emphasizes lifelong learning and competence?",
+    "choices": [
+      "Trustworthiness",
+      "Professional Development",
+      "Honesty",
+      "Justice"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "text": "Which professional body created the ACM Code of Conduct?",
+    "choices": [
+      "Australian Computer Society",
+      "Association for Computing Machinery",
+      "American Computer Manufacturers",
+      "Association for Code Makers"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "text": "Which principle in ACS Code means being fair and not discriminating?",
+    "choices": [
+      "Honesty",
+      "Respect for Others",
+      "Professional Development",
+      "Competence"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "text": "Professional ethics are more specific than general ethics because:",
+    "choices": [
+      "They only apply to IT",
+      "They are based on professional conduct principles",
+      "They ignore society’s values",
+      "They replace all laws"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "text": "What does “You reap what you sow” reflect?",
+    "choices": [
+      "Golden Rule",
+      "Virtue ethics",
+      "Utilitarianism",
+      "Deontology"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "text": "What is privacy often defined as?",
+    "choices": [
+      "Right to freedom of speech",
+      "Right to be left alone",
+      "Right to earn money",
+      "Right to education"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "text": "Roger Clarke defined information privacy as:",
+    "choices": [
+      "Deleting all personal data",
+      "Controlling how data about oneself is handled",
+      "Keeping all data offline",
+      "Never sharing data with anyone"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "text": "What are the two components of information privacy?",
+    "choices": [
+      "Laws and education",
+      "Communication and data privacy",
+      "Cookies and ads",
+      "Trust and honesty"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "text": "The UN Declaration of Human Rights protects privacy against:",
+    "choices": [
+      "Governments only",
+      "Arbitrary interference and attacks on reputation",
+      "Hackers only",
+      "Companies only"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "text": "Which law established privacy rights in Australia?",
+    "choices": [
+      "Cybersecurity Act 1995",
+      "Privacy Act 1988",
+      "Freedom Act 1978",
+      "Consumer Act 2000"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "text": "Which principle allows people to correct their personal data?",
+    "choices": [
+      "Anonymity",
+      "Access and correction",
+      "Data quality",
+      "Public disclosure"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "text": "The concept of parsimony in professional practice means:",
+    "choices": [
+      "Collect as much data as possible",
+      "Keep only strictly necessary data",
+      "Share data freely",
+      "Sell user data"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "text": "Which example shows personal data collection by Google?",
+    "choices": [
+      "Cookie banners",
+      "Location history tracking",
+      "Smart TV voice commands",
+      "License plate readers"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "text": "Facebook’s tagging system is an example of:",
+    "choices": [
+      "Communication privacy",
+      "Data collection of personal identity",
+      "Law enforcement system",
+      "Government surveillance"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "text": "Which of the following is a legal way to protect privacy?",
+    "choices": [
+      "Ignoring regulations",
+      "Data Protection Acts",
+      "Selling data for ads",
+      "Data leaks"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "text": "Website cookies are mainly used for:",
+    "choices": [
+      "Storing passwords",
+      "Personalization and targeted marketing",
+      "Encrypting messages",
+      "Protecting privacy"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "text": "Which solution balances companies’ needs and customers’ rights?",
+    "choices": [
+      "Selling more ads",
+      "Laws, education, and technical solutions",
+      "Ignoring regulations",
+      "Only customer trust"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "text": "Which Australian Act lists 13 privacy principles?",
+    "choices": [
+      "Cybercrime Act 2000",
+      "Privacy Act 1988",
+      "Consumer Protection Act",
+      "Data Security Act"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "text": "The principle of anonymity and pseudonymity allows users to:",
+    "choices": [
+      "Stay completely offline",
+      "Interact without revealing real identity",
+      "Delete all accounts",
+      "Encrypt all files"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "text": "Which breach in 2022 highlighted sensitive data risks?",
+    "choices": [
+      "Google",
+      "Medibank",
+      "Facebook",
+      "Microsoft"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "text": "Which type of data is considered sensitive under privacy laws?",
+    "choices": [
+      "Shopping list",
+      "Health data",
+      "Public holiday dates",
+      "Weather data"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "text": "The principle of data retention suggests data should be:",
+    "choices": [
+      "Stored forever",
+      "Retained only as long as necessary",
+      "Deleted immediately",
+      "Sold to advertisers"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "text": "Which is an ethical issue in privacy?",
+    "choices": [
+      "Writing new apps",
+      "How well companies comply with privacy principles",
+      "Developing AI",
+      "Designing faster hardware"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "text": "Which of the following is a genuine cybercrime?",
+    "choices": [
+      "Stealing a physical printer",
+      "Hacking a bank account online",
+      "Breaking into a computer lab",
+      "Placing a bomb in a server room"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "text": "Cyberpiracy involves:",
+    "choices": [
+      "Creating physical theft plans",
+      "Making unauthorized digital copies",
+      "Planting bombs in labs",
+      "Social media chatting"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "text": "Cybertrespass means:",
+    "choices": [
+      "Entering private property",
+      "Unauthorized access to computer systems",
+      "Damaging network cables physically",
+      "Buying fake devices"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "text": "Cybervandalism refers to:",
+    "choices": [
+      "Using IT for advertisements",
+      "Disrupting or destroying computer systems",
+      "Writing blogs",
+      "Recycling old hardware"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "text": "Malware is short for:",
+    "choices": [
+      "Malfunctioning hardware",
+      "Malicious software",
+      "Managed network",
+      "Memory awareness"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "text": "Which is NOT a common type of genuine cybercrime?",
+    "choices": [
+      "Cyberpiracy",
+      "Physical burglary",
+      "Cybervandalism",
+      "Cybertheft"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "text": "Which cyberattack involves overloading a system to block services?",
+    "choices": [
+      "Cyberpiracy",
+      "Denial-of-service (DoS)",
+      "Malware infection",
+      "Firewall blocking"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "text": "Which is an example of cybertheft?",
+    "choices": [
+      "Creating ransomware",
+      "Hacking a bank account to transfer money",
+      "Spreading fake news",
+      "Running a DoS attack"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "text": "Which example shows cyberpiracy?",
+    "choices": [
+      "Sending phishing emails",
+      "Using cracked software",
+      "Launching a botnet",
+      "Data encryption"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "text": "Which group is safe from cybercrime?",
+    "choices": [
+      "Only children",
+      "No one",
+      "Only government agencies",
+      "Only IT experts"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "text": "What is cybersecurity mainly about?",
+    "choices": [
+      "Developing games",
+      "Protecting computers and networks from attacks",
+      "Selling software",
+      "Internet marketing"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "text": "Which are the three main focuses of cybersecurity?",
+    "choices": [
+      "Cost, profit, business",
+      "Confidentiality, integrity, availability",
+      "Design, graphics, colors",
+      "Hardware, screens, keyboards"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "text": "Which of the following is a personal cybersecurity practice?",
+    "choices": [
+      "Ignoring updates",
+      "Using antivirus and two-factor authentication",
+      "Sharing passwords",
+      "Using public Wi-Fi always"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "text": "Business cybersecurity includes:",
+    "choices": [
+      "Ignoring customers",
+      "Security policies and employee training",
+      "Allowing free hacking",
+      "Selling passwords"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "text": "What scale includes Internet and international cybercrime?",
+    "choices": [
+      "Personal",
+      "National/International",
+      "Business",
+      "Household"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "text": "Which principle is key in security ethics?",
+    "choices": [
+      "Ignoring justice",
+      "Respecting privacy and confidentiality",
+      "Maximizing profit only",
+      "Breaking laws"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "text": "What should you avoid to protect against cybercrime?",
+    "choices": [
+      "Strong passwords",
+      "Suspicious links and emails",
+      "Antivirus software",
+      "Two-factor authentication"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "text": "The Internet originally emerged in:",
+    "choices": [
+      "1980s",
+      "Late 1960s",
+      "2000s",
+      "1990s"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "text": "The Internet was originally designed to:",
+    "choices": [
+      "Support online shopping",
+      "Survive nuclear war",
+      "Share memes",
+      "Stream movies"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "text": "TCP/IP is:",
+    "choices": [
+      "Hardware device",
+      "Internet protocol suite",
+      "Cloud storage provider",
+      "Encryption software"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "text": "Which company bought WhatsApp in 2014?",
+    "choices": [
+      "Google",
+      "Facebook",
+      "Apple",
+      "Microsoft"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "text": "Moore’s Law predicts:",
+    "choices": [
+      "Processor speed doubles every 24 months",
+      "Internet speed doubles daily",
+      "Cloud prices fall yearly",
+      "Computers never improve"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "text": "Huang’s Law is about:",
+    "choices": [
+      "CPU clock speed halving",
+      "GPU performance more than doubling every 2 years",
+      "Memory capacity reducing",
+      "Cloud storage vanishing"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "text": "Which computing paradigm was introduced in 1959 with IBM 1401?",
+    "choices": [
+      "Personal computers",
+      "Mainframes",
+      "Cloud computing",
+      "Enterprise computing"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "text": "Which computing paradigm became popular in the 1980s?",
+    "choices": [
+      "Network computing (client-server)",
+      "Cloud computing",
+      "Mobile computing",
+      "Blockchain"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "text": "Which type of cloud is publicly accessible?",
+    "choices": [
+      "Private cloud",
+      "Public cloud",
+      "Hybrid cloud",
+      "Distributed cloud"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "text": "IaaS stands for:",
+    "choices": [
+      "Information as a System",
+      "Infrastructure as a Service",
+      "Internet and Application Storage",
+      "International Application Service"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "text": "SaaS stands for:",
+    "choices": [
+      "Storage as a Service",
+      "Software as a Service",
+      "System as a Service",
+      "Server as a Service"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "text": "Which concern is NOT usually associated with cloud computing?",
+    "choices": [
+      "Reliability",
+      "Faster gaming",
+      "Privacy",
+      "Security"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "text": "Data ownership in the cloud is complex because:",
+    "choices": [
+      "Users never upload data",
+      "Providers may demand unrestricted licenses to use data",
+      "Data cannot move between countries",
+      "Cloud companies cannot store files"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "text": "Which ethical issue arises in cloud computing?",
+    "choices": [
+      "Every user has equal experience",
+      "Inequality due to different access and hardware quality",
+      "Cloud eliminates privacy concerns",
+      "Data always stays local"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "text": "Which service model provides development platforms?",
+    "choices": [
+      "IaaS",
+      "PaaS",
+      "SaaS",
+      "DaaS"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "text": "What does “outsourcing the servers” mean in cloud computing?",
+    "choices": [
+      "Buying more personal servers",
+      "Using third-party providers instead of maintaining servers",
+      "Deleting servers entirely",
+      "Hiding servers offline"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "text": "Which ethical posture aims to minimize differences for all users?",
+    "choices": [
+      "Deontological",
+      "Utilitarian",
+      "Hedonistic",
+      "Relativistic"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "text": "Which global issue is also linked to cloud computing?",
+    "choices": [
+      "Lack of movies",
+      "Environmental impact of server farms",
+      "Lack of mobile devices",
+      "End of programming languages"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "text": "Early computers were often broken down and recycled by whom?",
+    "choices": [
+      "Manufacturers",
+      "Scrap merchants",
+      "Government agencies",
+      "Users themselves"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "text": "Modern devices use rarer resources like what?",
+    "choices": [
+      "Iron and steel",
+      "Rare earths and gold",
+      "Plastic and silicon",
+      "Aluminum and copper"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "text": "What is a major environmental issue with batteries in modern devices?",
+    "choices": [
+      "They are too heavy",
+      "They can’t be buried due to chemicals",
+      "They are made of plastic",
+      "They require too much water"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "text": "In IT strategy, what has been underpriced?",
+    "choices": [
+      "Hardware costs",
+      "Total cost of ownership including environmental costs",
+      "Software development",
+      "Employee training"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "text": "What happens to old batteries under peak demand in mobile phones?",
+    "choices": [
+      "They cool down",
+      "Temperature rises, accelerating aging",
+      "They charge faster",
+      "They become more eﬀicient"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "text": "Manufacturers often ’throttle’ old batteries to prevent what?",
+    "choices": [
+      "Overcharging",
+      "Faster aging and random switch-offs",
+      "Slower performance",
+      "Battery explosion"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "text": "Compilers can optimize for what in battery consumption?",
+    "choices": [
+      "Peak performance over power",
+      "Power consumption over peak performance",
+      "Size reduction",
+      "Color display"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "text": "A mid-sized data centre consumes approximately how much power?",
+    "choices": [
+      "4 MW",
+      "40 MW",
+      "400 MW",
+      "4 GW"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "text": "Microsoft is reopening what for AI energy needs?",
+    "choices": [
+      "Coal plant",
+      "Three Mile Island nuclear station",
+      "Solar farm",
+      "Wind farm"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "text": "A ChatGPT query costs how much more energy than a Google query?",
+    "choices": [
+      "1.5x",
+      "15x",
+      "150x",
+      "1,500x"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "text": "Google’s power consumption in 2023 was how much?",
+    "choices": [
+      "2.4 TWh",
+      "24 TWh",
+      "240 TWh",
+      "2,400 TWh"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "text": "WCAG is a standard for what?",
+    "choices": [
+      "Energy eﬀiciency",
+      "Web Content Accessibility Guidelines",
+      "AI training",
+      "Battery recycling"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "text": "Green IT is often used for what?",
+    "choices": [
+      "Actual reductions",
+      "Publicity and reputational management",
+      "Only legislation",
+      "Ignoring competitors"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "text": "Who introduced the word ”Robota” in 1920?",
+    "choices": [
+      "Isaac Asimov",
+      "Karel Capek",
+      "George Devol",
+      "Alan Turing"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "text": "Who developed the first programmable robot in 1954?",
+    "choices": [
+      "Alan Turing",
+      "George Devol",
+      "Karel Capek",
+      "Warren McCulloch"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "text": "What is UNIMATE?",
+    "choices": [
+      "A type of AI",
+      "The first programmable robot",
+      "A safety standard",
+      "A humanoid robot"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "text": "Robots are programmable machines capable of what?",
+    "choices": [
+      "Only manual labor",
+      "Carrying out actions autonomously or semi-autonomously",
+      "Only thinking",
+      "Only sensing"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "text": "Robot ethics is an interdisciplinary field including what?",
+    "choices": [
+      "Only computer science",
+      "Mechanical engineering, CS, psychology, philosophy, law",
+      "Only law",
+      "Only design"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "text": "According to RIA, robots are defined as what?",
+    "choices": [
+      "Fixed manipulators",
+      "Programmable, multifunctional manipulators",
+      "Only mobile devices",
+      "Only humanoids"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "text": "What type of robots include mobile robots?",
+    "choices": [
+      "Manipulators",
+      "Different types like wheeled or tracked",
+      "Only humanoids",
+      "Only industrial"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "text": "Traditional industrial robots use what for programming?",
+    "choices": [
+      "AI",
+      "Teach box",
+      "Voice commands",
+      "Neural networks"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "text": "Traditional industrial robots lack what in intelligent environments?",
+    "choices": [
+      "Speed",
+      "On-line sensing, uncertainty handling, human interaction",
+      "Precision",
+      "Trajectories"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "text": "Examples of healthcare robots include what?",
+    "choices": [
+      "Only surgical",
+      "Surgical, rehabilitation, assistance, telepresence",
+      "Only cleaning",
+      "Only monitoring"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "text": "Safety risks in robotics include what?",
+    "choices": [
+      "Only sensor errors",
+      "Sensor errors, physical risks, bias, privacy vulnerabilities",
+      "Only trust",
+      "Only algorithms"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "text": "Safety in AI robotics is about controlling what?",
+    "choices": [
+      "Only life",
+      "Risks to an acceptable level",
+      "Only property",
+      "Only supervision"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "text": "Ways to achieve safety include what?",
+    "choices": [
+      "Only regulation",
+      "Regulation, supervision, value alignment, transparency",
+      "Only deployment",
+      "Only principles"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "text": "In care robots, moral responsibility is higher for whom?",
+    "choices": [
+      "Robots",
+      "Human agents",
+      "Patients",
+      "Stakeholders"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "text": "Ethical issues in surgical robotics lie in what?",
+    "choices": [
+      "Only consent",
+      "Regulation, informed consent, liability",
+      "Only stakeholders",
+      "Only vehicles"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "text": "Social considerations include what?",
+    "choices": [
+      "Only digital divide",
+      "Digital divide, autonomy, trust, workforce impacts",
+      "Only sustainability",
+      "Only rights"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "text": "LSE reports what impact on global workforce from robotics?",
+    "choices": [
+      "18% gain, 17% loss",
+      "18% loss, 17% gain",
+      "50% loss",
+      "No impact"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "text": "References mention what about autonomous weapons?",
+    "choices": [
+      "Support them",
+      "Ethical and legal cases against them",
+      "Only future",
+      "Only Geneva"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "text": "The challenge of value alignment is discussed in what?",
+    "choices": [
+      "Only ethics",
+      "Oxford Handbook of Digital Ethics",
+      "Only SpringerLink",
+      "Only ICRC"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "text": "AI is variably defined as machines that do what?",
+    "choices": [
+      "Only act like humans",
+      "Think/act like humans, act/think rationally",
+      "Only think rationally",
+      "Only mimic robots"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "text": "Early foundations of AI include what in 1943?",
+    "choices": [
+      "Turing Test",
+      "Mathematical model of neural network by McCulloch and Pitts",
+      "ELIZA",
+      "Deep Blue"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "text": "What caused the first AI Winter (1974-1980)?",
+    "choices": [
+      "Overpromising and limitations",
+      "Overpromising, limitations, inadequate computing power",
+      "Too much funding",
+      "Successful projects"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "text": "ELIZA is an early what?",
+    "choices": [
+      "Chess program",
+      "Natural language processing program",
+      "Robot",
+      "Neural network"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "text": "The second AI Winter (1987-1993) was caused by what?",
+    "choices": [
+      "Under-delivering expert systems",
+      "Over-promising and under-delivering expert systems",
+      "Neural revival",
+      "Funding increase"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "text": "In 1997, what defeated Garry Kasparov?",
+    "choices": [
+      "AlphaGo",
+      "IBM’s Deep Blue",
+      "Watson",
+      "GPT-3"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "text": "Geoffrey Hinton coined what term in 2006?",
+    "choices": [
+      "Machine learning",
+      "Deep learning",
+      "NLP",
+      "Computer vision"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "text": "In 2011, what won Jeopardy?",
+    "choices": [
+      "Deep Blue",
+      "IBM Watson",
+      "AlphaGo",
+      "ChatGPT"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "text": "In 2016, what defeated Lee Sedol?",
+    "choices": [
+      "Watson",
+      "Google’s AlphaGo",
+      "GPT-3",
+      "DALL-E"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "text": "Core concepts of AI include what?",
+    "choices": [
+      "Only ML",
+      "ML, supervised/unsupervised, DL, NLP, vision, generative AI, LLMs",
+      "Only NLP",
+      "Only vision"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "text": "Supervised learning uses what?",
+    "choices": [
+      "Unlabeled data",
+      "Labeled dataset",
+      "Rewards",
+      "No data"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "text": "Unsupervised learning aims to uncover what?",
+    "choices": [
+      "Labels",
+      "Hidden patterns or structures",
+      "Rewards",
+      "Actions"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "text": "Reinforcement learning involves what?",
+    "choices": [
+      "Only states",
+      "Agent interacting with environment, states, actions, rewards",
+      "Only clustering",
+      "Only regression"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "text": "Neural networks are inspired by what?",
+    "choices": [
+      "Computers",
+      "Human brain",
+      "Robots",
+      "Satellites"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "text": "Computer vision enables machines to interpret what?",
+    "choices": [
+      "Text",
+      "Visual data",
+      "Audio",
+      "Code"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "text": "Generative AI creates what?",
+    "choices": [
+      "Only text",
+      "New data similar to input (text, images, video)",
+      "Only images",
+      "Only code"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "text": "LLMs are trained on what?",
+    "choices": [
+      "Small text",
+      "Vast amounts of text data",
+      "Images",
+      "Videos"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "text": "Ethical best practices for AI include what?",
+    "choices": [
+      "Only audits",
+      "Audits, inclusive design, fairness tools, safety priorities",
+      "Only literacy",
+      "Only regulation"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "text": "XR continuum includes what?",
+    "choices": [
+      "Only VR",
+      "Real environment, AR, MR, VR",
+      "Only AR",
+      "Only MR"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "text": "Motivation for XR is to remove separation between what?",
+    "choices": [
+      "Hardware and software",
+      "Digital world and real world",
+      "Users and computers",
+      "Screens and keyboards"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "text": "HCI focuses on interactions through what?",
+    "choices": [
+      "Only code",
+      "Interfaces, making them natural",
+      "Only hardware",
+      "Only ethics"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "text": "Milgram’s continuum was introduced in what year?",
+    "choices": [
+      "1920",
+      "1994",
+      "2010",
+      "2020"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "text": "AR augments what?",
+    "choices": [
+      "Virtual scene",
+      "Real-world scene",
+      "Only images",
+      "Only videos"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "text": "VR is what type of environment?",
+    "choices": [
+      "Augmented",
+      "Totally immersive",
+      "Mixed",
+      "Real"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "text": "Current uses of AR include what in broadcasts?",
+    "choices": [
+      "Only HUD",
+      "Yellow first line in football",
+      "Only remote controls",
+      "Only games"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "text": "HUD is used in what?",
+    "choices": [
+      "Only games",
+      "Aircraft, automobiles",
+      "Only TVs",
+      "Only phones"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "text": "Physical impacts include what?",
+    "choices": [
+      "Only trust",
+      "Accidents, simulator sickness",
+      "Only bias",
+      "Only data"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "text": "For children, concerns include what?",
+    "choices": [
+      "Only positive effects",
+      "Cybersickness, visual symptoms, obesity, sleep disorders",
+      "Only neutral",
+      "No concerns"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "text": "Actions in VR could place us at risk how?",
+    "choices": [
+      "No risk",
+      "Altered perceptions in real world",
+      "Only data breaches",
+      "Only harassment"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "text": "Privacy in VR involves what data?",
+    "choices": [
+      "Only text",
+      "Personal, kinematic, biometric data",
+      "Only images",
+      "Only audio"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "text": "VR motion data can identify users with what accuracy?",
+    "choices": [
+      "50%",
+      "87.5%",
+      "100%",
+      "10%"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "text": "Content in VR raises questions about what?",
+    "choices": [
+      "Only real crimes",
+      "Equivalence of virtual crimes to real ones",
+      "Only regulation",
+      "Only exposure"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "text": "Metacrime includes what?",
+    "choices": [
+      "Only identity",
+      "Identity, financial, property crimes in metaverse",
+      "Only terrorism",
+      "Only cybercrime"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "text": "Accessibility in VR includes what?",
+    "choices": [
+      "Only input",
+      "Input controls, design, body types, vision",
+      "Only socio-economic",
+      "Only inclusion"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "text": "Using VR to simulate diversity experiences is what?",
+    "choices": [
+      "Always ethical",
+      "Questionable ethically",
+      "Not mentioned",
+      "Mandatory"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "text": "References mention what about metaverse addiction?",
+    "choices": [
+      "No prevalence",
+      "Prevalence of addiction to VR applications",
+      "Only positive",
+      "Only children"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "text": "Interpol’s 2024 whitepaper is on what?",
+    "choices": [
+      "Only VR",
+      "Metaverse from law enforcement perspective",
+      "Only AR",
+      "Only ethics"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "text": "IoT involves interconnectivity through what?",
+    "choices": [
+      "Only sensors",
+      "Internet, allowing communication and data sharing",
+      "Only automation",
+      "Only scalability"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "text": "To support IoT, we need what?",
+    "choices": [
+      "Only devices",
+      "Wireless technologies, cheap devices, monitoring",
+      "Only networks",
+      "Only interaction"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "text": "IoT benefits include what?",
+    "choices": [
+      "Only cost savings",
+      "Eﬀiciency, automation, safety, personalization",
+      "Only environmental",
+      "Only security"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "text": "IoT is complex due to what?",
+    "choices": [
+      "Only data",
+      "Diverse devices, data volume, security, privacy",
+      "Only connectivity",
+      "Only standards"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "text": "Wireless media like microwave requires what?",
+    "choices": [
+      "Obstructed sight",
+      "Unobstructed line of sight",
+      "Only bandwidth",
+      "Only encryption"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "text": "Satellites include types like what?",
+    "choices": [
+      "Only GEO",
+      "GEO, MEO, LEO",
+      "Only radio",
+      "Only infrared"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "text": "GPS uses what satellites?",
+    "choices": [
+      "GEO",
+      "MEO",
+      "LEO",
+      "Radio"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "text": "Radio transmission is used for what?",
+    "choices": [
+      "Only walls",
+      "Connecting computers, peripherals, LANs",
+      "Only high speeds",
+      "Only installation"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "text": "RFID tags include active and passive; passive rely on what?",
+    "choices": [
+      "Batteries",
+      "Readers for power",
+      "Antennas",
+      "Microchips"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "text": "Wi-Fi standard 802.11ac is up to how much?",
+    "choices": [
+      "54 Mbps",
+      "6.5 Gbps",
+      "9.6 Gbps",
+      "54 Gbps"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "text": "Cellular networks divide areas into what?",
+    "choices": [
+      "Towers",
+      "Cells with base stations",
+      "Frequencies",
+      "Generations"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "text": "5G supports what?",
+    "choices": [
+      "Voice only",
+      "Ultra-fast speeds, low latency, IoT",
+      "Only data",
+      "Only video"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "text": "Infrared is used in what?",
+    "choices": [
+      "Only microwaves",
+      "Remote controls, IR blasters",
+      "Only satellites",
+      "Only radio"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "text": "Australian Code of Practice for IoT has how many points?",
+    "choices": [
+      "5",
+      "13",
+      "10",
+      "20"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "text": "IoT literacy includes changing what?",
+    "choices": [
+      "Only passwords",
+      "Router settings, device passwords, 2FA",
+      "Only apps",
+      "Only logs"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "text": "References mention IoT vision by whom?",
+    "choices": [
+      "Only Gubbi",
+      "Gubbi et al. (2013)",
+      "Only Chaudhuri",
+      "Only Kizza"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "text": "Digital harms of smart home devices are reviewed in what?",
+    "choices": [
+      "Only 2023",
+      "Bull-Gil et al. (2023)",
+      "Only Caron",
+      "Only Kale"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "text": "Challenges of IoT include what per Kale (2021)?",
+    "choices": [
+      "Only security",
+      "Security, ethics, privacy, laws",
+      "Only benefits",
+      "Only wireless"
+    ],
+    "answerIndex": 1
+  }
 ]
