@@ -61,7 +61,7 @@ const io = new Server(server, {
       NETLIFY_ORIGIN
     ],
     methods: ["GET", "POST", "OPTIONS"],
-    credentials: true                       // set to false if not using cookies/auth
+    credentials: false                       // set to false if not using cookies/auth
   }
 });
 
